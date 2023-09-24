@@ -1,0 +1,283 @@
+@import 'reset.scss';
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('/fonts/NeueMachina-Light.eot');
+    src: local('Neue Machina Light'), local('NeueMachina-Light'),
+        url('/fonts/NeueMachina-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueMachina-Light.woff2') format('woff2'),
+        url('/fonts/NeueMachina-Light.woff') format('woff'),
+        url('/fonts/NeueMachina-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('/fonts/NeueMachina-Regular.eot');
+    src: local('Neue Machina Regular'), local('NeueMachina-Regular'),
+        url('/fonts/NeueMachina-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueMachina-Regular.woff2') format('woff2'),
+        url('/fonts/NeueMachina-Regular.woff') format('woff'),
+        url('/fonts/NeueMachina-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('/fonts/NeueMachina-Ultrabold.eot');
+    src: local('Neue Machina Ultrabold'), local('NeueMachina-Ultrabold'),
+        url('/fonts/NeueMachina-Ultrabold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueMachina-Ultrabold.woff2') format('woff2'),
+        url('/fonts/NeueMachina-Ultrabold.woff') format('woff'),
+        url('/fonts/NeueMachina-Ultrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container {
+    max-width: 1400px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    box-sizing: content-box;
+} 
+
+.main {
+    flex: 1 1 auto;
+}
+
+.header {
+	&__container { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 120px;
+    }
+	&__logo { }
+}
+.logo {
+        font-size: 30px;
+        line-height: 117.5%;
+        min-width: 300px;
+        text-transform: uppercase;
+	&__name { }
+	&__last-name { 
+        text-align: right;
+        opacity: 0.5;
+    }
+}
+.navigation {
+	&__list { 
+        display: flex;
+    }
+	&__item { 
+        &:not(:last-child) {
+            margin-right: 35px;
+        }
+    }
+	&__link { 
+        color: #FFF;
+        font-size: 30px;
+        line-height: 117.5%;
+    }
+}
+
+.home,
+.projects-page,
+.contacts-page {
+    position: relative;
+    opacity: 0.5;
+    &::after {
+        content: '';
+        height: 3px;
+        width: 100%;
+        background-color: #FFF;
+        opacity: 0.5;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        
+    }
+}
+
+.welcome {
+    padding: 70px 0px;
+    background: url(/svg/main\ bg.svg) left/contain no-repeat;
+	&__body { 
+        padding: 0px 50px;
+    }
+	&__title { 
+        font-size: 170px;
+        line-height: 117.5%;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+	&__subtitle { 
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+
+        p {
+            font-size: 150px;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-right: 80px;
+        }
+        
+        img {
+            animation: rotate 8s normal linear infinite;
+            display: block;
+            margin-right: 80px;
+        }
+        @keyframes rotate {
+            0% {
+              transform: rotate3d(0, 0, 1, 0deg);
+            }
+            
+            100% {
+              transform: rotate3d(0, 0, 1, 360deg);
+            }
+          }
+
+        div {
+            font-size: 30px;
+            line-height: 129%;
+            opacity: 0.5;
+            padding: 0px 15px 0px 0px;
+        }
+    }
+
+    
+}
+
+.skills {
+    padding: 70px 0px;
+    
+    &__container {
+        border-top: 1px solid #FFF;
+    }
+    
+    &__title {
+        font-size: 70px;
+        line-height: 117.5%;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-weight: 800;
+        text-align: center;
+        padding-top: 70px;
+    }
+	&__body { 
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 7.5px;
+        justify-content: center;
+    }
+	&__item { 
+        font-size: 40px;
+        font-style: italic;
+        line-height: 117.5%;
+        padding: 13.5px 55px 12px;
+        display: block;
+    }
+	
+}
+
+
+.footer {
+    
+	&__container { 
+       
+    }
+	&__data { 
+        border-top: 1px solid #FFF;
+        padding: 50px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+	&__copy { }
+}
+.socials {
+	&__list { 
+        display: flex;
+        gap: 0px 15px;
+    }
+	&__item { }
+	&__link { }
+}
+
+
+.contacts {
+    padding: 100px 0px;
+	&__container { }
+	&__title { 
+        font-size: 70px;
+        line-height: 117.5%;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        font-weight: 800;
+        text-align: center;
+    }
+	&__subtitle { 
+        font-size: 50px;
+        line-height: 117.5%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+	&__info { 
+        font-size: 30px;
+        line-height: 117.5%;
+        margin-bottom: 40px;
+        text-align: center;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.projects {
+    padding: 60px 0px;
+	&__container { }
+	&__title { }
+	&__list { 
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+	&__item { 
+        flex: 0 1 30%;
+        box-shadow: rgba(255, 255, 255, 0.5) 0px 2px 8px 0px;
+        border-radius: 30px;
+        overflow: hidden;
+        padding: 15px;
+    }
+	&__image { 
+        height: 300px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            
+        }
+    }
+	&__link { }
+	&__description { 
+        font-size: 25px;
+        line-height: 117.5%;
+        
+    }
+}
