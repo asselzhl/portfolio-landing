@@ -284,8 +284,9 @@
         grid-column: span 3;
     }
     
-    &:nth-child(4) {
-        grid-column: span 6;
+    &:nth-child(4),
+    &:nth-child(5) {
+        grid-column: span 3;
     }
 	
 	&__image { 
